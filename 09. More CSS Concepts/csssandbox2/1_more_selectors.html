@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>More Selectors</title>
+    <style>
+      /* if div is a direct parent of p */
+      div > p {
+        background-color: #ddd;
+      }
+
+      /* if p is right after div */
+      div + p {
+        background: #333;
+        color: #fff;
+      }
+
+      /* if p is preceded by a ul with same parent */
+      ul ~ p {
+        background: #ff0000;
+        color: #fff;
+      }
+
+      /* Target attribute */
+      a[target] {
+        background: #ddd;
+      }
+
+      /* Target specific attribute value */
+      input[type='text'],
+      input[type='email'] {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+
+      <ul>
+        <li>Item 1</li>
+        <li><p>Lorem ipsum dolor sit amet.</p></li>
+        <li>Item 3</li>
+      </ul>
+
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <a href="#">Page 1</a> <a href="#">Page 2</a>
+    <a href="http://google.com" target="_blank">Google</a>
+
+    <br /><br />
+
+    <form>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

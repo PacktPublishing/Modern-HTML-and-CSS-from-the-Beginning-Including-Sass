@@ -1,0 +1,19 @@
+# Git Commands
+
+# Initialize a repo
+git init
+
+# Add to local repo
+git add .
+
+# Commit to local repo
+git commit -m 'Initial Commit'
+
+# Add remote github repo
+git remote add origin https://github.com/USERNAME/REPO.git
+
+# Initial push
+git push -u origin master
+
+# Pushes after initial
+git push

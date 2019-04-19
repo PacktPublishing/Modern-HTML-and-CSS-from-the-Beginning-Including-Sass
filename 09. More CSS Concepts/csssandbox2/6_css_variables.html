@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Variables</title>
+    <style>
+      /* Variables */
+      :root {
+        --container-max: 960px;
+        /* --box-bg-color: steelblue;
+        --box-txt-color: #fff;
+        --box-1-width: 1;
+        --box-2-width: 3; 
+        --header-bg-color: #333;
+        --header-txt-color: #fff;
+        --header-txt-align: center; */
+      }
+
+      header {
+        --header-bg-color: #333;
+        --header-txt-color: #fff;
+        --header-txt-align: center;
+      }
+
+      .box {
+        --box-bg-color: steelblue;
+        --box-txt-color: #fff;
+        --box-1-width: 1;
+        --box-2-width: 3;
+        --box-shadow-h-offset: 10px;
+        --box-shadow-v-offset: 5px;
+        --box-shadow-blur: 5px;
+        --box-shadow-color: #ccc;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        background: #f4f4f4;
+      }
+
+      header {
+        /* --header-bg-color: green; */
+        background-color: var(--header-bg-color);
+        color: var(--header-txt-color);
+        text-align: var(--header-txt-align);
+      }
+
+      .container {
+        display: flex;
+        margin: auto;
+        max-width: var(--container-max);
+      }
+
+      .box {
+        padding: 1rem;
+        background: var(--box-bg-color);
+        color: var(--box-txt-color);
+        margin: 1rem;
+        box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset)
+          var(--box-shadow-blur) var(--box-shadow-color);
+      }
+
+      .box-1 {
+        flex: var(--box-1-width);
+      }
+
+      .box-2 {
+        flex: var(--box-2-width);
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>CSS Variables</h1></header>
+
+    <div class="container">
+      <div class="box box-1">
+        <h1>Hello World</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+          ullam necessitatibus itaque quisquam incidunt obcaecati temporibus
+          sint nulla exercitationem.
+        </p>
+      </div>
+      <div class="box box-2">
+        <h1>Hello World</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod
+          ullam necessitatibus itaque quisquam incidunt obcaecati temporibus
+          sint nulla exercitationem.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
